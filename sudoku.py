@@ -100,6 +100,7 @@ class TestSudoku(unittest.TestCase):
     def test_set_number_validate_column(self):
         sudoku = Sudoku()
         sudoku.add(1, 1, 9)
+        
         with self.assertRaises(SamePlanceException):
             sudoku.add(1, 1, 9)
         self.assertEqual(sudoku.board[1][1], 9)
@@ -128,7 +129,7 @@ class TestSudoku(unittest.TestCase):
             sudoku.add(6, 8, 9)
         self.assertEqual(sudoku.board[6][6], 9)
         self.assertEqual(sudoku.board[6][8], 0)
-        
+
 
 
 
